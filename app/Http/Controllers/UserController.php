@@ -34,13 +34,17 @@ class UserController extends Controller
             }
         }
         public function dashboardPage(){
-            if (Auth::check()) {
+            // if (Auth::check()) {
                 return view('dashboard');
-            }
-            return redirect()->route('login')->withErrors(['error' => 'Please login first']);
+            // }
+            // return redirect()->route('login')->withErrors(['error' => 'Please login first']);
         }
         public function logout(){
             Auth::logout();
             return redirect()->route('login');
+        }
+
+        public function inner(){
+            return view('inner');
         }
 }
