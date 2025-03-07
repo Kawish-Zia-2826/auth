@@ -23,7 +23,7 @@ return Application::configure(basePath: dirname(__DIR__))
             Test::class
         ]);
 
-        $middleware->append(Test::class);
+        // $middleware->append(Test::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
